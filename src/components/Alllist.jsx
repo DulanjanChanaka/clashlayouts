@@ -27,7 +27,7 @@ const Alllist = () => {
   const [data, setData] = useState ([])
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, 'topphoto'), (snapshot) => {
+    const unsubscribe = onSnapshot(collection(db, 'allphoto'), (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
@@ -43,7 +43,7 @@ const Alllist = () => {
 
     
       return (
-        <div className="crypto_list">
+        <div className="list-coc">
           {data.map(({ imageUrl, index }) => (
             <div className="card" key={index}>
               <div className="card_image">

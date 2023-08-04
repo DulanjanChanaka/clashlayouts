@@ -40,7 +40,7 @@ const Allayout = () => {
   const currentPosts = data.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <div className="app">
+    <div id='all' className="app">
       <Headline title="All" />
       <Alllist data={currentPosts} />
       <Pagination

@@ -59,20 +59,14 @@ const Navbar = () => {
         onClick={() => handleItemClick('item1')}
       >Home</li>
                 </Link>
-                <Link href='/#about'>
+                <Link href='/#all'>
                 <li
         className={`ml-10 text-sm uppercase hover:border-b-2 hover:text-[#5651e5] ${activeItem === 'item2' ? 'border-black' : ''}`}
         style={{ borderBottomWidth: activeItem === 'item2' ? '1px' : '0px' }}
         onClick={() => handleItemClick('item2')}
       >Push</li>
                 </Link>
-                <Link href='/#skills'>
-                <li
-        className={`ml-10 text-sm uppercase hover:border-b-2 hover:text-[#5651e5] ${activeItem === 'item3' ? 'border-black' : ''}`}
-        style={{ borderBottomWidth: activeItem === 'item3' ? '1px' : '0px' }}
-        onClick={() => handleItemClick('item3')}
-      >War</li>
-                </Link>
+                
                
             </ul>
             <div onClick={handleNav} className='md:hidden text-black'>
@@ -102,12 +96,10 @@ const Navbar = () => {
                         <Link href='/'>
                         <li onClick={()=> setNav(false)} className='py-4 text-sm'>Home</li>
                         </Link>
-                        <Link href='/#about'>
+                        <Link href='/#all'>
                         <li onClick={()=> setNav(false)} className='py-4 text-sm'>push</li>
                         </Link>
-                        <Link href='/#skills'>
-                        <li onClick={()=> setNav(false)} className='py-4 text-sm'>war</li>
-                        </Link>
+
                     </ul>
 
                 </div>
