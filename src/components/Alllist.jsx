@@ -44,10 +44,10 @@ const Alllist = () => {
     
       return (
         <div className="list-coc">
-          {data.map(({ imageUrl, index }) => (
+          {data.map(({ imageUrl, baseurl }, index) => (
             <div className="card" key={index}>
               <div className="card_image">
-                <img src={imageUrl} />
+                <a href={baseurl}><img src={imageUrl} /></a>
               </div>
             </div>
           ))}
