@@ -71,9 +71,9 @@ const Newcontent = ({ title= [] }) => {
         delay: 2500,
         disableOnInteraction: false,
       }} modules={[Navigation, Autoplay]}>
-        {data?.map(({ imageUrl }, index) => (
+        {data?.map(({ imageUrl, baseurl }, index) => (
           <SwiperSlide className="w-auto h-auto" key={index}>
-            <img src={imageUrl}/>
+            <a href={baseurl}><img src={imageUrl}/></a>
           </SwiperSlide>
         ))}
       </Swiper>
