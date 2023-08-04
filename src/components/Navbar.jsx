@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <div style={{backgroundColor: `${navBg}`}} className={shadow? 'fixed w-full h-20 shadow-xl z-[100]': 'fixed w-full h-20 z-[100]'}>
         <div className='flex justify-between  items-center w-full h-full px-2 2xl:px-16'>
-            <h2 className='font-bold  text-black'>CLASH  LAYOUTS</h2>
+            <h2 className='font-bold  text-black'>PUSH LAYOUTS</h2>
            
            <div>
             <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
@@ -82,13 +82,13 @@ const Navbar = () => {
           }>
                 <div>
                     <div className='flex w-full items-center justify-between'>
-                    <h2 className='font-semibold  text-black'>COC PUSH</h2>
+                    <h2 className='font-semibold  text-black'>PUSH LAYOUTS</h2>
                         <div onClick={handleNav}className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer text-black'>
                             <AiOutlineClose/>
                         </div>
                     </div>
                     <div className ='border-b border-t-gray-300 my-4'>
-                        <p className ='w-[85%] md:w-[90%] text-black  py-4'>Zero to Hero</p>
+                        <p className ='w-[85%] md:w-[90%] text-black  py-4'>Play Like Legend</p>
                     </div>
                 </div>
                 <div className='py-4 flex flex-col'>
