@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Allcard.css"
 
 const Allcard = ({ image ,index}) => {
     return (

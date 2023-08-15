@@ -5,9 +5,9 @@ import "./Alllist.css";
 import "./Allcard.css";
 import { useEffect, useState } from 'react';
 
-import { getFirestore, onSnapshot, collection,  } from 'firebase/firestore';
+// import { getFirestore, onSnapshot, collection, query, orderBy, limit, getDocs   } from 'firebase/firestore';
 import { initializeApp } from 'firebase/app';
-
+import { getFirestore, onSnapshot, collection, query, orderBy, limit } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDdyTqvViyqtLETSrNMzqFP-xM0NIa9lQ8",
@@ -27,16 +27,20 @@ const Alllist = () => {
   const [data, setData] = useState ([])
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, 'allphoto'), (snapshot) => {
-      const data = snapshot.docs.map((doc) => ({
+    const q = query(collection(db, 'allphoto'), orderBy("description", "desc")); // Adjust the limit as needed
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const fetchedData = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-      setData(data);
+      setData(fetchedData);
+      console.log(data)
     });
 
     return () => {
       unsubscribe();
+      
     };
   }, []);
 
@@ -56,3 +60,4 @@ const Alllist = () => {
 };
 
 export default Alllist;
+

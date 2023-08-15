@@ -27,7 +27,7 @@ export default function SwiperComponent() {
         className=" w-[100%]  "
       >
         <SwiperSlide >
-          <img className='w-[100%] max-h-96' src="https://i.ibb.co/17ZRR8S/6.jpg" alt="/" />
+          <img className='w-[100%]   max-h-100' src="https://i.ibb.co/17ZRR8S/6.jpg" alt="/" />
         </SwiperSlide>
       </Swiper>
       </div>
