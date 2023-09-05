@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'CLASH LAYOUTS',
-  description: 'Push Layout',
+  title: 'LEGEND BASES',
+  description: 'Play like Legend ',
 }
 
 export default function RootLayout({ children }) {
