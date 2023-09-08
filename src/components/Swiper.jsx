@@ -29,7 +29,7 @@ export default function SwiperComponent() {
         className=" w-[100%]  "
       >
         <SwiperSlide >
-          <img className='w-[100%] mt-4  max-h-100' src="https://i.ibb.co/zm8Dqrs/cover.jpg" alt="/" />
+          <img className='w-[100%] mt-4  max-h-100' src="https://i.ibb.co/vjmYsrP/Whats-App-Image-2023-09-08-at-21-20-36.jpg" alt="/" />
           
         </SwiperSlide>
       </Swiper>
