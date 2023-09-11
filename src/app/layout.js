@@ -13,16 +13,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-87VL8427MW"></script>
-<script>
-  {`
-  window.dataLayer = window.dataLayer || [];
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-87VL8427MW"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-87VL8427MW');
-`}
-</script>
+          `,
+          }}
+        />
         
         
       </head>
