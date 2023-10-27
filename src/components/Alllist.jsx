@@ -6,20 +6,10 @@ import "./Allcard.css";
 import { useEffect, useState } from 'react';
 
 // import { getFirestore, onSnapshot, collection, query, orderBy, limit, getDocs   } from 'firebase/firestore';
-import { initializeApp } from 'firebase/app';
-import { getFirestore, onSnapshot, collection, query, orderBy, limit } from 'firebase/firestore';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDdyTqvViyqtLETSrNMzqFP-xM0NIa9lQ8",
-  authDomain: "clashlayouts-9d19d.firebaseapp.com",
-  projectId: "clashlayouts-9d19d",
-  storageBucket: "clashlayouts-9d19d.appspot.com",
-  messagingSenderId: "1073716509146",
-  appId: "1:1073716509146:web:56713b2e4bf310187b28e3"
-};
+import {  onSnapshot, collection, query, orderBy, limit } from 'firebase/firestore';
+import { db } from "@/firebase/firebase";
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 
 const Alllist = () => {

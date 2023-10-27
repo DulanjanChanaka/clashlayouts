@@ -6,20 +6,8 @@ import Pagination from "./Pagination";
 import Headline from "./Headline";
  // Import the data array from the appropriate file
 import { getFirestore, onSnapshot, getDocs, collection, query , limit} from 'firebase/firestore';
-import { initializeApp } from 'firebase/app';
-const firebaseConfig = {
-  apiKey: "AIzaSyDdyTqvViyqtLETSrNMzqFP-xM0NIa9lQ8",
-  authDomain: "clashlayouts-9d19d.firebaseapp.com",
-  projectId: "clashlayouts-9d19d",
-  storageBucket: "clashlayouts-9d19d.appspot.com",
-  messagingSenderId: "1073716509146",
-  appId: "1:1073716509146:web:56713b2e4bf310187b28e3"
-};
+import { db } from "@/firebase/firebase";
 
-
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 const Allayout = () => {
   const [currentPage, setCurrentPage] = useState(1);
