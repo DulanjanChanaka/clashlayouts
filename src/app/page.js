@@ -1,6 +1,7 @@
 
 import About from '@/components/About'
 import Allayout from '@/components/Alllayout'
+import Alllist from '@/components/Alllist'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Homepage from '@/components/Homepage'
@@ -16,7 +17,7 @@ export default function Home() {
       <Navbar/>
       <Homepage/>
       <Today/>
-      <Allayout/>
+      <Alllist/>
       <Contact/>
       <About/>
       <Footer/>

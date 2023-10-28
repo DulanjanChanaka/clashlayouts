@@ -12,7 +12,7 @@ export default function SwiperComponent() {
   return (
     <>
     
-      <div className="w-[100%] mt-12">
+      <div className="w-full h-full  mt-12 mb-10">
       <Swiper
         effect={'fade'}
         spaceBetween={30}
@@ -29,8 +29,9 @@ export default function SwiperComponent() {
         className=" w-[100%]  "
       >
         <SwiperSlide >
-          <img className='w-[100%] mt-4  max-h-100' src="https://i.ibb.co/vjmYsrP/Whats-App-Image-2023-09-08-at-21-20-36.jpg" alt="/" />
-          
+          <div>
+          <img className='w-full mt-4  max-h-100' src="https://i.ibb.co/vjmYsrP/Whats-App-Image-2023-09-08-at-21-20-36.jpg" alt="/" />
+          </div>
         </SwiperSlide>
       </Swiper>
       </div>
