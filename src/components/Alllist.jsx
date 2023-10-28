@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 // import { getFirestore, onSnapshot, collection, query, orderBy, limit, getDocs   } from 'firebase/firestore';
 
-import {  onSnapshot, collection, query, orderBy, limit } from 'firebase/firestore';
+import {  onSnapshot, collection, query, orderBy } from 'firebase/firestore';
 import { db } from "@/firebase/firebase";
 
 

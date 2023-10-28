@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useEffect, useState } from 'react';
 import { Navigation , Autoplay  } from "swiper/modules";
-import { getFirestore, onSnapshot, collection,  } from 'firebase/firestore';
+import {  onSnapshot, collection,  } from 'firebase/firestore';
 import { db } from "@/firebase/firebase";
 
 
