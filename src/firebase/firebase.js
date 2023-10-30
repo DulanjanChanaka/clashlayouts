@@ -2,12 +2,12 @@ import { getApp, getApps, initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDdyTqvViyqtLETSrNMzqFP-xM0NIa9lQ8",
-  authDomain: "clashlayouts-9d19d.firebaseapp.com",
-  projectId: "clashlayouts-9d19d",
-  storageBucket: "clashlayouts-9d19d.appspot.com",
-  messagingSenderId: "1073716509146",
-  appId: "1:1073716509146:web:56713b2e4bf310187b28e3"
+  apiKey: "AIzaSyArz8_WB2h3QvCIX_Dd5zBtcX18mAQeMxo",
+  authDomain: "clashlayout-cc75f.firebaseapp.com",
+  projectId: "clashlayout-cc75f",
+  storageBucket: "clashlayout-cc75f.appspot.com",
+  messagingSenderId: "139548364508",
+  appId: "1:139548364508:web:eb41cc6312851fcf9f6e19"
 };
 
 // Initialize Firebase
