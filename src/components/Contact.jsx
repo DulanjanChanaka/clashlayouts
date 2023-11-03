@@ -4,6 +4,7 @@ import Headline from './Headline'
 const Contact = () => {
   return (
     <div>
+      <script src="https://alwingulla.com/88/tag.min.js" data-zone="19580" async data-cfasync="false"></script>
         <Headline title="Contact"/>
         <div className=' flex flex-col justify-center items-center mb-7'>
             

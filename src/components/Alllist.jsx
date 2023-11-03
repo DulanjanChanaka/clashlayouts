@@ -37,6 +37,7 @@ const Alllist = () => {
 
   return (
     <div id="all">
+      <script src="https://alwingulla.com/88/tag.min.js" data-zone="19580" async data-cfasync="false"></script>
       <Headline title="All"/>
     <div className="list-coc">
       {allPost[currentPage - 1] &&
