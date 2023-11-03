@@ -16,7 +16,6 @@ export default function Home() {
     <div>
       <Navbar/>
       <Homepage/>
-      <Monetag/>
       <Today/>
       <Alllist/>
       <Contact/>
