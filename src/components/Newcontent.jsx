@@ -42,7 +42,7 @@ const Newcontent = ({ title = [] }) => {
     <div className="w-full h-50vh m-0 p-0">
       <h2>{title}</h2>
       <Swiper
-        className="w-full p-0"
+        className="w-full p-0 "
         slidesPerView={slidesPerView}
         spaceBetween={10}
         navigation
@@ -53,7 +53,7 @@ const Newcontent = ({ title = [] }) => {
         modules={[Navigation, Autoplay]}
       >
         {data?.map(({ imageUrl, baseurl }, index) => (
-          <SwiperSlide className="w-auto h-auto" key={index}>
+          <SwiperSlide className="w-auto h-auto " key={index}>
             <a href={baseurl}>
               <img src={imageUrl} alt={`Slide ${index}`} />
             </a>

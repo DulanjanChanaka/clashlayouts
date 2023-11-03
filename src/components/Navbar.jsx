@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <div style={{backgroundColor: `${navBg}`}} className={shadow? 'fixed w-full h-20 shadow-xl z-[100]': 'fixed w-full h-20 z-[100]'}>
         <div className='flex justify-between  items-center w-full h-full px-2 2xl:px-16'>
-            <h2 className='font-bold  text-black'>LEGEND BASES</h2>
+            <Link href='/'><h2 className='font-bold  text-black'>LEGEND BASES</h2></Link>
            
            <div>
             <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
@@ -82,7 +82,7 @@ const Navbar = () => {
           }>
                 <div>
                     <div className='flex w-full items-center justify-between'>
-                    <h2 className='font-semibold  text-black'>LEGEND BASES</h2>
+                    <Link href='/'><h2 className='font-semibold  text-black'>LEGEND BASES</h2></Link>
                         <div onClick={handleNav}className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer text-black'>
                             <AiOutlineClose/>
                         </div>

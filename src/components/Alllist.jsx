@@ -4,6 +4,7 @@ import Axios from 'axios';
 import { Pagination } from "@mui/material";
 import "./Alllist.css";
 import "./Allcard.css";
+import Headline from "./Headline";
 const Alllist = () => {
   const [pageCount, setPageCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,7 +36,8 @@ const Alllist = () => {
   };
 
   return (
-    <div>
+    <div id="all">
+      <Headline title="All"/>
     <div className="list-coc">
       {allPost[currentPage - 1] &&
         allPost[currentPage - 1].map((item, index) => (
@@ -51,6 +53,7 @@ const Alllist = () => {
           </div>
         ))}
     </div>
+    <div className="flex flex-row align-middle text-center justify-center ">
     <Pagination
       count={pageCount}
       variant="outlined"
@@ -58,8 +61,9 @@ const Alllist = () => {
       shape="rounded"
       color="primary"
     
-      className="bg-white px-2 py-2 mx-3 "
+      className="bg-white px-2 py-2 mx-3 rounded-lg  "
     />
+    </div>
   </div>
   );
 };
