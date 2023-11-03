@@ -1,34 +1,13 @@
 "use client";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useEffect, useState } from "react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { query, getDocs, collection } from "firebase/firestore";
-import { db } from "@/firebase/firebase";
 
 const Newcontent = ({ title = [] }) => {
   const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const q = query(collection(db, "topphoto"));
-
-    getDocs(q)
-      .then((querySnapshot) => {
-        const fetchData = [];
-        querySnapshot.forEach((doc) => {
-          // doc.data() is never undefined for query doc snapshots
-          fetchData.push(doc.data());
-          // console.log(doc.id, " => ", doc.data());
-        });
-        setData(fetchData);
-        console.log(fetchData);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
   const [slidesPerView, setSlidesPerView] = useState(4);
 
   useEffect(() => {
@@ -48,10 +27,20 @@ const Newcontent = ({ title = [] }) => {
     };
   }, []);
 
+  useEffect(() => {
+    // Fetch data from your API endpoint
+    fetch("https://benevolent-kitsune-f1c5de.netlify.app/api/top-photo")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div className="w-full h-50vh m-0 p-0">
       <h2>{title}</h2>
-      {/* Render the Swiper directly without checking typeof window */}
       <Swiper
         className="w-full p-0"
         slidesPerView={slidesPerView}
@@ -66,7 +55,7 @@ const Newcontent = ({ title = [] }) => {
         {data?.map(({ imageUrl, baseurl }, index) => (
           <SwiperSlide className="w-auto h-auto" key={index}>
             <a href={baseurl}>
-              <img src={imageUrl} />
+              <img src={imageUrl} alt={`Slide ${index}`} />
             </a>
           </SwiperSlide>
         ))}
