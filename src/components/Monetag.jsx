@@ -3,7 +3,7 @@ import React from 'react'
 function Monetag() {
   return (
     <div className='text-center text-5xl' >
-        <h1>Hello Monetag&#33;</h1>
+        <h1>Hello Monetag</h1>
     </div>
   )
 }
