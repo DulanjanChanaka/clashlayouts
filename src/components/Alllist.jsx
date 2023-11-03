@@ -57,7 +57,6 @@ const Alllist = () => {
     <div className="flex flex-row align-middle text-center justify-center ">
     <Pagination
       count={pageCount}
-      variant="outlined"
       onChange={handlePaginationChange}
       shape="rounded"
       color="primary"
